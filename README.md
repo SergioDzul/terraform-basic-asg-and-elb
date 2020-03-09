@@ -1,5 +1,11 @@
 # Terraform module for basic EC2
 
+Versions: 
+```
+Terraform v0.12.21
++ provider.aws v2.52.0
+```
+
 ## Overview
 The next module prented to be used as a basic infraestructure to deploy basic websites. I pretent to create another modules for specific technologies. 
 
