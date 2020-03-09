@@ -1,7 +1,7 @@
 resource "aws_security_group" "allow_ssh_anywhere" {
     name            = "${var.project_name}-allow_ssh_anywhere"
     description     = "Allow all inbound traffic to SSH"
-    vpc_id          = var.vpc_id
+    vpc_id          = data.aws_vpc.selected.id
 
     ingress {
         from_port   = 22
@@ -23,7 +23,7 @@ resource "aws_security_group" "allow_ssh_anywhere" {
 resource "aws_security_group" "allow_http_anywhere" {
     name            = "${var.project_name}-allow_http_anywhere"
     description     = "Allow all inbound traffic to HTTP"
-    vpc_id          = var.vpc_id
+    vpc_id          = data.aws_vpc.selected.id
 
     ingress {
         from_port   = 80
