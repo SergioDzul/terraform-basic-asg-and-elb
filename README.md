@@ -20,7 +20,7 @@ terraform plan
 Deploy in the AWS use:
 
 ```
-terraform applly
+terraform apply
 ```
 
 Remove all elementes with:

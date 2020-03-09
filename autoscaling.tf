@@ -9,7 +9,7 @@ resource "aws_autoscaling_group" "web" {
   health_check_grace_period = 10
   # placement_group           = "${aws_placement_group.test.id}"
   launch_configuration      = aws_launch_configuration.web.name
-  vpc_zone_identifier       = ["subnet-1b772725", "subnet-61bd7b6f", "subnet-a98955e4", "subnet-c5737a99", "subnet-e6171cc8", "subnet-ec99948b"]
+  vpc_zone_identifier       =  data.aws_subnet_ids.selected.ids
 
   tag {
     key                 = "Name"

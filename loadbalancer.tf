@@ -1,7 +1,7 @@
 # Create a new load balancer
 resource "aws_elb" "web" {
   name               = "${var.project_name}-elb"
-  subnets = ["subnet-1b772725", "subnet-61bd7b6f", "subnet-a98955e4", "subnet-c5737a99", "subnet-e6171cc8", "subnet-ec99948b"]
+  subnets =  data.aws_subnet_ids.selected.ids
 
 /*
 access_logs {
